@@ -1,5 +1,6 @@
 const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,19 +8,22 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    colors: {
-      'waves': '#0099ff',
-    },
 
     container: {
-      center: true,
+      center: true, 
       padding: '6rem'
     },
+
     extend: {
       fontFamily: {
         'sans': ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'waves': '#0099ff',
+      },
     },
+
+
   },
   plugins: [
     require('@tailwindcss/typography'),
