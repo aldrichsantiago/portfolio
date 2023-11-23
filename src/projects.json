@@ -2,16 +2,33 @@
     {
         "id":"1",
         "title":"Zaza Co.",
-        "subtitle": "A E-commerce website that is built with ReactJS, Shadcn, NodeJS, DrizzleORM, MySQL"
+        "subtitle": "A E-commerce website that is built with ReactJS, Shadcn, NodeJS, DrizzleORM, MySQL",
+        "image": "",
+        "github_link":"",
+        "live_link":""
     },
     {
         "id":"2",
-        "title":"Weather Application",
-        "subtitle": "A Ecommerce website that is built with ReactJS, Shadcn, NodeJS, Drizzle ORM"
+        "title":"Real-Time-Chat-Application",
+        "subtitle": "A real-time chat application that is built with ReactJS, NodeJS, MongoDB, Firebase(Auth), Socket.io",
+        "image": "",
+        "github_link":"",
+        "live_link":""
     },
     {
         "id":"3",
+        "title":"Weather Application",
+        "subtitle": "A Weather Application that gets its weather data on OpenWeatherAPI built with Vanilla JS",
+        "image": "",
+        "github_link":"",
+        "live_link":""
+    },
+    {
+        "id":"4",
         "title":"My Portfolio Site",
-        "subtitle": "This portfolio site is built with ReactJS and Framer motion"
+        "subtitle": "This portfolio site is built with ReactJS and Framer motion",
+        "image": "",
+        "github_link":"",
+        "live_link":""
     }
 ]

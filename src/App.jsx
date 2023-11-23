@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import projects from './projects.json'
-import { FaXmark, FaRegPaperPlane, FaFolderPlus, FaGithub } from "react-icons/fa6";
+import { FaXmark, FaRegPaperPlane, FaGithub } from "react-icons/fa6";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,7 +46,7 @@ function App() {
         <div className="flex flex-wrap justify-center gap-20">
           {projects.map((item) => (
             <motion.div
-              className={`h-40 card bg-white rounded-lg shadow-md cursor-pointer transform transition-transform duration-500 delay-100 ${
+              className={`h-40 card bg-white rounded-lg shadow-md cursor-pointer transform transition-transform duration-500 delay-100 hover:scale-110${
                 selectedId === item.id ? 'card-selected' : ''
               } scale-100 hover:scale-110 transform-gpu transition-opacity`}
               layoutId={`card-container-${item.id}`}
@@ -99,7 +99,8 @@ function App() {
                       <motion.h2 
                       className={`text-4xl font-bold mb-2 
                       ${item.title === "Zaza Co."? "text-green-600":""} 
-                      ${item.title === "Weather Application"? "text-blue-600":""}
+                      ${item.title === "Weather Application"? "text-yellow-400":""}
+                      ${item.title === "Real-Time-Chat-Application"? "text-blue-600":""}
                       ${item.title === "My Portfolio Site"? "text-violet-600":""} `}
                       >{item.title}</motion.h2>
                       <motion.h5 className="text-lg font-bold mb-1 text-gray-700">{item.subtitle}</motion.h5>
@@ -126,7 +127,7 @@ function App() {
       </svg>
       <div id='contact' className="pt-32 h-screen bg-black">
         <div className="container w-2/3 flex flex-col items-center justify-center">
-        <form action="https://formbold.com/s/oPaza" method="post" className='w-full flex flex-col items-center justify-center gap-6'>
+        <form action={`${import.meta.env.FORM_BOLD_URL}`} method="post" className='w-full flex flex-col items-center justify-center gap-6'>
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-normal lg:text-5xl text-white mb-12">
               Get in touch.
             </h1>
