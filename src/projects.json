@@ -4,7 +4,8 @@
         "title":"Zaza Co.",
         "subtitle": "A E-commerce website that is built with ReactJS, Shadcn, NodeJS, DrizzleORM, MySQL",
         "image": "",
-        "github_link":"",
+        "github_link":"https://github.com/aldrichsantiago/Zaza-Co.",
+        "github_link2":"https://github.com/aldrichsantiago/Zaza-Co.-Backend",
         "live_link":""
     },
     {
@@ -12,7 +13,7 @@
         "title":"Real-Time-Chat-Application",
         "subtitle": "A real-time chat application that is built with ReactJS, NodeJS, MongoDB, Firebase(Auth), Socket.io",
         "image": "",
-        "github_link":"",
+        "github_link":"https://github.com/aldrichsantiago/real-time-chat-app",
         "live_link":""
     },
     {
@@ -20,7 +21,7 @@
         "title":"Weather Application",
         "subtitle": "A Weather Application that gets its weather data on OpenWeatherAPI built with Vanilla JS",
         "image": "",
-        "github_link":"",
+        "github_link":"https://github.com/aldrichsantiago/weather-app",
         "live_link":""
     },
     {
@@ -28,7 +29,7 @@
         "title":"My Portfolio Site",
         "subtitle": "This portfolio site is built with ReactJS and Framer motion",
         "image": "",
-        "github_link":"",
+        "github_link":"https://github.com/aldrichsantiago/portfolio",
         "live_link":""
     }
 ]
