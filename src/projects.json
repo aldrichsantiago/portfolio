@@ -6,7 +6,7 @@
         "image": "",
         "github_link":"https://github.com/aldrichsantiago/Zaza-Co.",
         "github_link2":"https://github.com/aldrichsantiago/Zaza-Co.-Backend",
-        "live_link":""
+        "live_link":"https://zaza-co.netlify.app"
     },
     {
         "id":"2",
@@ -14,7 +14,7 @@
         "subtitle": "A real-time chat application that is built with ReactJS, NodeJS, MongoDB, Firebase(Auth), Socket.io",
         "image": "",
         "github_link":"https://github.com/aldrichsantiago/real-time-chat-app",
-        "live_link":""
+        "live_link":"https://real-time-chat-app-aldrichsantiagos-projects.vercel.app"
     },
     {
         "id":"3",
@@ -30,6 +30,6 @@
         "subtitle": "This portfolio site is built with ReactJS and Framer motion",
         "image": "",
         "github_link":"https://github.com/aldrichsantiago/portfolio",
-        "live_link":""
+        "live_link":"https://portfolio-aldrichsantiago-aldrichsantiagos-projects.vercel.app"
     }
 ]

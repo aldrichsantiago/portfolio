@@ -1,6 +1,6 @@
+/* eslint-disable no-undef */
 const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 export default {
