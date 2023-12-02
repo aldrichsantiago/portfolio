@@ -22,7 +22,7 @@
         "subtitle": "A Weather Application that gets its weather data on OpenWeatherAPI built with Vanilla JS",
         "image": "",
         "github_link":"https://github.com/aldrichsantiago/weather-app",
-        "live_link":""
+        "live_link":"https://weather-application-aldrichsantiagos-projects.vercel.app"
     },
     {
         "id":"4",
@@ -30,6 +30,6 @@
         "subtitle": "This portfolio site is built with ReactJS and Framer motion",
         "image": "",
         "github_link":"https://github.com/aldrichsantiago/portfolio",
-        "live_link":"https://portfolio-aldrichsantiago-aldrichsantiagos-projects.vercel.app"
+        "live_link":"https://portfolio-aldrichsantiago.vercel.app"
     }
 ]
