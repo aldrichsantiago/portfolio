@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import projects from './projects.json'
 import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn } from "react-icons/fa6";
@@ -8,7 +8,16 @@ import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn } from "react-icons/fa
 
 function App() {
   const [selectedId, setSelectedId] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [subject, setSubject] = useState(null)
+  const [message, setMessage] = useState(null)
   const [tap, setTap] = useState(false)
+
+  useEffect(()=>{
+    setEmail(null)
+    setSubject(null)
+    setMessage(null)
+  }, [])
 
   return (
     <>
@@ -198,7 +207,13 @@ function App() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                       >
-                        <motion.img src={item.image}/>
+                        <motion.img 
+                        className='cursor-pointer'
+                        whileTap={{ scale: 1.4 }}
+                        animate={{scale:0.8, opacity: 1}}
+                        initial={{scale:0, opacity: 0}}
+                        loading='lazy'
+                        src={item.image}/>
                         <motion.div className='flex flex-wrap gap-8'>
                           <motion.a target="_blank" className='shadow-md hover:scale-110 transition-transform w-28 py-2 flex justify-center items-center text-black  text-center font-medium rounded-lg bg-white' href={item.github_link}>
                             <svg className='inline mr-1' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
@@ -230,14 +245,14 @@ function App() {
       </svg>
       <div id='contact' className="pt-48 sm:pt-32 h-screen bg-black z-20">
         <div className="sm:container w-full sm:w-2/3 flex flex-col items-center justify-center">
-        <form action={`${import.meta.env.VITE_FORM_BOLD_URL}`} method="post" className='w-full flex flex-col items-center justify-center gap-6'>
+        <form action={`${import.meta.env.VITE_FORM_BOLD_URL}`} method="POST" className='w-full flex flex-col items-center justify-center gap-6'>
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-normal lg:text-5xl text-white mb-12">
               Get in touch.
             </h1>
           
-            <input type="email" name="email" id="email" placeholder='Email' className='w-2/3 h-14 rounded-lg text-xl py-1 px-3 font-medium tracking-tight focus:outline-none'/>
-            <input type="text" name="subject" id="Subject" placeholder='Subject' className='w-2/3 h-14 rounded-lg text-xl py-1 px-3 font-medium tracking-tight focus:outline-none'/>
-            <textarea name="message" id="message" placeholder='Enter your message here' className='w-2/3 h-44 rounded-lg resize-none text-xl py-4 px-3 font-medium tracking-tight focus:outline-none'></textarea>
+            <input value={email} required onChange={(e)=>setEmail(e.target.value)} type="email" name="email" id="email" placeholder='Email' className='w-2/3 h-14 rounded-lg text-xl py-1 px-3 font-medium tracking-tight focus:outline-none'/>
+            <input value={subject} required onChange={(e)=>setSubject(e.target.value)} type="text" name="subject" id="Subject" placeholder='Subject' className='w-2/3 h-14 rounded-lg text-xl py-1 px-3 font-medium tracking-tight focus:outline-none'/>
+            <textarea value={message} required onChange={(e)=>setMessage(e.target.value)} name="message" id="message" placeholder='Enter your message here' className='w-2/3 h-44 rounded-lg resize-none text-xl py-4 px-3 font-medium tracking-tight focus:outline-none'></textarea>
 
             <button type='submit' className='w-2/3 h-20 rounded-lg border-none bg-emerald-50 py-2 px-12 text-3xl font-bold tracking-wider hover:text-white hover:bg-emerald-500 transition-colors flex items-center gap-2 justify-center'><FaRegPaperPlane className='z-10'/>SEND MESSAGE</button>
           </form>
