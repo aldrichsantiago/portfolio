@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import projects from './projects.json'
 import chat from './assets/chat_app.png'
 import weather from './assets/weather_app.png'
 import ecomm from './assets/ecomm_app.png'
@@ -13,7 +14,6 @@ function App() {
   const [email, setEmail] = useState(null)
   const [subject, setSubject] = useState(null)
   const [message, setMessage] = useState(null)
-  const [projects, setProjects] = useState([])
   const [tap, setTap] = useState(false)
 
   useEffect(()=>{
@@ -21,19 +21,15 @@ function App() {
     setSubject(null)
     setMessage(null)
 
-    fetchProjects();
+    addImagesToProjects();
     
   }, [])
 
-  async function fetchProjects(){
-    const res = await fetch('./src/projects.json')
-    const data = await res.json()
-    console.log(data)
-    data[0].image = ecomm
-    data[1].image = chat
-    data[2].image = weather
-    data[3].image = portfolio
-    setProjects(data)
+  async function addImagesToProjects(){
+    projects[0].image = ecomm
+    projects[1].image = chat
+    projects[2].image = weather
+    projects[3].image = portfolio
   }
   
 
