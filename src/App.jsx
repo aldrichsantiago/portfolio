@@ -1,8 +1,10 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
-import projects from './projects.json'
 import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import chat from './assets/chat_app.png'
+import weather from './assets/weather_app.png'
+import ecomm from './assets/ecomm_app.png'
+import portfolio from './assets/portfolio_site.png'
 
 
 
@@ -11,13 +13,29 @@ function App() {
   const [email, setEmail] = useState(null)
   const [subject, setSubject] = useState(null)
   const [message, setMessage] = useState(null)
+  const [projects, setProjects] = useState([])
   const [tap, setTap] = useState(false)
 
   useEffect(()=>{
     setEmail(null)
     setSubject(null)
     setMessage(null)
+
+    fetchProjects();
+    
   }, [])
+
+  async function fetchProjects(){
+    const res = await fetch('./src/projects.json')
+    const data = await res.json()
+    console.log(data)
+    data[0].image = ecomm
+    data[1].image = chat
+    data[2].image = weather
+    data[3].image = portfolio
+    setProjects(data)
+  }
+  
 
   return (
     <>
