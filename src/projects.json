@@ -19,7 +19,7 @@
     {
         "id":"3",
         "title":"Weather Application",
-        "subtitle": "A Weather Application that gets its weather data on OpenWeatherAPI built with Vanilla JS",
+        "subtitle": "A simple weather application that gets its weather data on OpenWeatherAPI built with ReactJS",
         "image": "./src/assets/weather_app.png",
         "github_link":"https://github.com/aldrichsantiago/weather-app",
         "live_link":"https://weather-application-aldrichsantiagos-projects.vercel.app"

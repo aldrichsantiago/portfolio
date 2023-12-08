@@ -177,7 +177,7 @@ function App() {
           ))}
           <div
             onClick={()=>window.open("https://github.com/aldrichsantiago")}
-            className={`w-[380px] h-40 card bg-white rounded-lg shadow-md cursor-pointer transform transition-transform duration-500 hover:scale-110 -z-10`}>
+            className={`w-[380px] h-40 card bg-white rounded-lg shadow-md cursor-pointer transform transition-transform duration-500 hover:scale-110`}>
             <div className="flex flex-col items-center max-w-sm p-3 gap-4">
               <h2 className="text-2xl font-bold mb-2 text-black hover:scale-110 transition-transform">View more projects</h2>
               <h5 className="text-4xl font-bold hover:scale-110 transition-transform"><FaGithub/></h5>
