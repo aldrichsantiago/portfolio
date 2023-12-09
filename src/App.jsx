@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
-import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn, FaFileArrowDown } from "react-icons/fa6";
 import projects from './projects.json'
 import chat from './assets/chat_app.png'
 import weather from './assets/weather_app.png'
@@ -127,8 +127,15 @@ function App() {
           </motion.p>
         </div>
         <div className="w-12 h-24 mt-12 flex flex-col items-center justify-center gap-4">
-          <FaGithub size={30} className='hover:scale-110 transition-transform cursor-pointer' onClick={()=>{window.open("https://github.com/aldrichsantiago")}}/>
-          <FaLinkedinIn size={30} className='hover:scale-110 transition-transform cursor-pointer' onClick={()=>{window.open("https://www.linkedin.com/in/aldrichsantiago")}}/>
+          <a title='Github'>
+            <FaGithub size={30} className='hover:scale-110 transition-transform cursor-pointer' onClick={()=>{window.open("https://github.com/aldrichsantiago")}}/>
+          </a>
+          <a title='LinkedIn'>
+            <FaLinkedinIn size={30} className='hover:scale-110 transition-transform cursor-pointer' onClick={()=>{window.open("https://www.linkedin.com/in/aldrichsantiago")}}/>
+          </a>
+          <a href="./src/assets/Resume.pdf" download title="Download Resume" className='w-auto scale-10'>
+            <FaFileArrowDown   size={30} className='hover:scale-110 transition-transform cursor-pointer' href='./Resume.pdf'/>
+          </a>
         </div>
 
         <div className="w-auto mt-16 flex flex-col">
@@ -254,7 +261,7 @@ function App() {
         </AnimatePresence>
       </motion.div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='z-20 relative -bottom-1'>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='-z-10 relative -bottom-1'>
         <path fill="#000000" fillOpacity="1" d="M0,64L18.5,106.7C36.9,149,74,235,111,266.7C147.7,299,185,277,222,245.3C258.5,213,295,171,332,128C369.2,85,406,43,443,69.3C480,96,517,192,554,208C590.8,224,628,160,665,154.7C701.5,149,738,203,775,208C812.3,213,849,171,886,160C923.1,149,960,171,997,165.3C1033.8,160,1071,128,1108,101.3C1144.6,75,1182,53,1218,64C1255.4,75,1292,117,1329,122.7C1366.2,128,1403,96,1422,80L1440,64L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"></path>
       </svg>
       <div id='contact' className="pt-48 sm:pt-32 h-screen bg-black z-20">
@@ -268,7 +275,7 @@ function App() {
             <input value={subject} required onChange={(e)=>setSubject(e.target.value)} type="text" name="subject" id="Subject" placeholder='Subject' className='w-2/3 h-14 rounded-lg text-xl py-1 px-3 font-medium tracking-tight focus:outline-none'/>
             <textarea value={message} required onChange={(e)=>setMessage(e.target.value)} name="message" id="message" placeholder='Enter your message here' className='w-2/3 h-44 rounded-lg resize-none text-xl py-4 px-3 font-medium tracking-tight focus:outline-none'></textarea>
 
-            <button type='submit' className='w-2/3 h-20 rounded-lg border-none bg-emerald-50 py-2 px-12 text-3xl font-bold tracking-wider hover:text-white hover:bg-emerald-500 transition-colors flex items-center gap-2 justify-center'><FaRegPaperPlane className='z-10'/>SEND MESSAGE</button>
+            <button type='submit' className='w-2/3 h-20 rounded-lg border-none bg-emerald-50 py-2 px-12 text-3xl font-bold tracking-wider hover:text-white hover:bg-emerald-500 transition-colors flex items-center gap-2 justify-center'><FaRegPaperPlane/>SEND MESSAGE</button>
           </form>
         </div>
         
