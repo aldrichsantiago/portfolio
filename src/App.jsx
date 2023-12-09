@@ -6,6 +6,7 @@ import chat from './assets/chat_app.png'
 import weather from './assets/weather_app.png'
 import ecomm from './assets/ecomm_app.png'
 import portfolio from './assets/portfolio_site.png'
+import resume from './assets/Resume.pdf'
 
 
 
@@ -133,7 +134,7 @@ function App() {
           <a title='LinkedIn'>
             <FaLinkedinIn size={30} className='hover:scale-110 transition-transform cursor-pointer' onClick={()=>{window.open("https://www.linkedin.com/in/aldrichsantiago")}}/>
           </a>
-          <a href="./src/assets/Resume.pdf" download title="Download Resume" className='w-auto scale-10'>
+          <a href={resume} download title="Download Resume" className='w-auto scale-10'>
             <FaFileArrowDown   size={30} className='hover:scale-110 transition-transform cursor-pointer' href='./Resume.pdf'/>
           </a>
         </div>
