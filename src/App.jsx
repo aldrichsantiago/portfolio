@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { FaXmark, FaRegPaperPlane, FaGithub, FaLinkedinIn, FaFileArrowDown } from "react-icons/fa6";
+import { Analytics } from "@vercel/analytics/react"
 import projects from './projects.json'
 import chat from './assets/chat_app.png'
 import weather from './assets/weather_app.png'
@@ -281,7 +282,7 @@ function App() {
         </div>
         
       </div>
-
+      <Analytics />
     </>
   )
 }
